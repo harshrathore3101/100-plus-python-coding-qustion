@@ -94,3 +94,10 @@
 # # or
 # print(max(arr))
 
+# 3.3 Take a number as input. Then get the sum of the numbers. If the number is n. Then get
+# inpt = int(input('Enter any number:'))
+# sum = 0
+# for no in range(inpt+1):
+#     sum = sum + (no ** 2)
+#     print(no)
+# print(sum)
