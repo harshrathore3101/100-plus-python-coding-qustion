@@ -101,3 +101,179 @@
 #     sum = sum + (no ** 2)
 #     print(no)
 # print(sum)
+
+# 3.4 For a list, find the second largest number in the list.
+# Nos = [7,2,43,24,5,6,4,22,1,55,52,54,42,2,4,8]
+# length = len(Nos)
+# high_1 = Nos[0]
+# high_2 = Nos[0]
+# for no in range(1,length):
+#     if Nos[no] > high_1:
+#          high_2 = high_1
+#          high_1 = Nos[no]
+#     elif Nos[no] > high_2:
+#          high_2 = Nos[no]
+# print[high_2] ///////////////////////////////////////////////////////////////////////////////////
+
+# or
+
+# Nos = [7,2,43,24,5,6,4,22,1,68,55,52,54,42,2,4,8]
+# Nos.remove(max(Nos))
+# print(max(Nos))
+
+# 3.5 For a list, find the second smallest element in the list
+# Nos = [7,2,43,24,5,6,4,22,1,68,55,52,54,42,2,4,8,0,0.5]
+# Nos.remove(min(Nos))
+# print(min(Nos))
+
+# 3.6 For a given string, remove all duplicate characters from that string.
+# def remove(str):
+#     res = ""
+#     for i in str:
+#         if i not in str:
+#             res += i
+#     return res
+
+# str_user = input("Enter a string : ")
+# ans=remove(str_user)
+# print(ans) ////////////////////////////////////////////////////////////////////////////////////
+
+# 4.1 Convert miles to kilometers.
+# miles = float(input("Enter distance in miles : "))
+# km = miles*1.609344
+# print(km)
+
+# 4.2 Take the temperature in degrees Celsius and convert it to Fahrenheit.
+# Celsius = float(input("Enter temp :"))
+# Fahrenheit = ((Celsius * 9) / 5)+32
+# print(Fahrenheit)
+
+# 4.3 Convert a decimal number to binary number.
+# /////////////////////////////////////
+
+# 4.4 ////////////////////////////////
+
+# 4.5 ////////////////////////////////
+
+# 6.1 You borrowed $5000 for 2 years with 2% interest per year. Calculate the simple interest to know how much you have to pay?
+# price = int(input("Eeter amount : "))
+# rate = float(input("Enter intrest rate : "))
+# time = float(input("Enter duration : "))
+# simple_intrest = (price * rate * time ) / 100
+# print(simple_intrest)
+
+# 6.2 Take money borrowed, interest and duration as input. Then, compute the compound interest rate.
+# price = int(input("Eeter amount : "))
+# rate = float(input("Enter intrest rate : "))
+# time = float(input("Enter duration : "))
+# compound_intrest = price * ((1+rate/100) ** time)
+# print(compound_intrest)
+
+# 6.3 Calculate grade of five subjects.
+# print('Enter your marks:')
+# sub1=int(input("First subject: "))
+# sub2=int(input("Second subject: "))
+# sub3=int(input("Third subject: "))
+# sub4=int(input("Fourth subject: "))
+# sub5=int(input("Fifth subject: "))
+
+# avg = (sub1 + sub2 + sub3 + sub4 + sub5 ) / 5
+
+# if avg >= 90:
+#     print("A")
+# elif avg >= 80 and avg < 90:
+#     print("B")
+# elif avg >= 70 and avg < 80:
+#     print("C")
+# elif avg >= 60 and avg < 70:
+#     print("D")
+# elif avg < 60:
+#     print("E")
+
+# 6.4 Compute gravitational force between two objects.
+# F = G m^1m^2/r^2
+
+# m1 = int(input("Enter mass 1 : "))
+# m2 = int(input("Enter mass 2 : "))
+# distance = int(input("enter distance : "))
+
+# force = (6.673*((10)**-11) * m1 * m2 ) / distance ** 2
+# print(force)
+
+# 6.5 Take three sides of a triangle. And then calculate the area of the triangle.
+# import math
+# a = float(input('Enter first side: '))
+# b = float(input('Enter second side: '))
+# c = float(input('Enter third side: '))
+# s = (a + b + c)/2
+# area = math.sqrt(s *(s-a) * (s-b) * (s-c))
+# print(area)
+
+# 7.1 For a given number, check whether the number is a prime number or not.
+# no = int(input("Enter a no. : "))
+# for i in range(2,no):
+#     if (no % i) == 0:
+#         print('Not a prime no.')
+#         break
+#     else:
+#         print("prime ")
+#         break
+
+# 7.2 Ask the user to enter a number. Then find all the primes up to that number.
+
+# def is_prime(no):
+#     for i in range(2,no):
+#         if (no % i) == 0:
+#             return False
+#         else:
+#             return True
+
+# no = int(input("Enter a no. : "))
+# primes = []
+
+# for i in range (2, no+1):
+#     if is_prime(i) is True:
+#         primes.append(i)
+# print(primes)
+
+# 7.3 Ask the user to enter a number. Then find all the primes factors for the number.
+# no = int(input("Enter a no. : "))
+# factor = []
+
+# for i in range(2,no):
+#     if (no % i) == 0:
+#         factor.append(i)
+# print(factor)
+
+# 7.4 Find the smallest prime factor for the given number.
+# no = int(input("Enter a no. : "))
+# factor = []
+# for i in range(2,no):
+#     if (no % i) == 0:
+#         factor.append(i)
+# print(min(factor))
+
+# 8.1 Reverse a string.
+# str = input("Enter a string")
+# rev = ""
+# for i in str:
+#     rev = i + rev
+# print(rev)
+
+# 8.2 Reverse a string using a stack.
+# str = input("Enter a string: ")
+# rev = ""
+# stack = []
+# for i in str:
+#     stack.append(i)
+# while len(stack) > 0:
+#     last = stack.pop()
+#     rev = rev + last
+# print(rev)
+
+# 8.5 Reverse the word in a sentence.
+usr_input = input("Enter a sentence: ")
+words = usr_input.split()
+words.reverse()
+rev = " ".join(words)
+print(rev)
