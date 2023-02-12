@@ -272,8 +272,170 @@
 # print(rev)
 
 # 8.5 Reverse the word in a sentence.
-usr_input = input("Enter a sentence: ")
-words = usr_input.split()
-words.reverse()
-rev = " ".join(words)
-print(rev)
+# usr_input = input("Enter a sentence: ")
+# words = usr_input.split()
+# words.reverse()
+# rev = " ".join(words)
+# print(rev)
+
+# 9.1 Check whether the string is a palindrome.
+# my_str = input('String to check: ')
+# rev_str = my_str[::-1]
+# if my_str == rev_str:
+#   print("It is palindrome")
+# else:
+#   print("It is not palindrome")
+
+# 9.2 With a given integral number n, write a program to calculate the sum of cubes.
+# user_num = int(input('Enter a number: '))
+# sum =0
+
+# for i in range(user_num+1):
+#     sum = sum + (i**3)
+
+# print(sum)
+
+# 9.3 Check whether a number is an Armstrong number
+# user_num = int(input('Enter a number: '))
+# diget = str(user_num)
+# sum =0
+# order = len(str(user_num))
+# temp = user_num
+# for i in diget:
+#     sum = sum + int(i)**order
+
+# if sum == user_num:
+#     print("Is an Armstrong number")
+# else:
+#   print("Not an Armstrong number")
+# print(sum)
+
+# 9.4 Calculate the greatest common divisor (gcd) of two numbers.
+# import math
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))
+
+#  gcd = 1
+# small = min(num1,num2)
+# for i in range( 1 , small+1):
+#     if (num1 % i == 0) and ( num2 % i == 0):
+#         gcd = i
+
+# # or////
+# gcd =  math.gcd(num1,num2)
+# print(gcd)
+
+#9.5 For two numbers, calculate the least common multiple (LCM).
+# import math
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))
+# lcm  = math.lcm(num1,num2)
+# print(lcm)
+
+# 11.1 Build a simple guessing game where it will continuously ask the user to enter a number between 1 and 10.
+# If the user's guesses matched, the user will score 10 points, and display the score. If the users' guess doesn’t match display the generated number.
+# Also, if the user enters “q” then stop the game.
+
+# import random
+# print('To stop anytime, enter: q')
+# score = 0
+# while True:
+# 	rand = random.randint(1,10)
+# 	inpt = input("enter a number between 1 and 10 : ")
+# 	if inpt == 'q' or inpt =="Q":
+# 		print("Game over")
+# 		break
+# 	inpt_no = int(inpt)
+# 	if inpt_no == rand:
+# 		print("Matched")
+# 		score += 10
+# 		print('Your new score:', score)
+# 	else:
+# 		print("doesn’t match")
+# 		print(rand)
+
+# 11.2 Build s simple Rock paper Scissor game.
+
+# p1 = input("First player: rock, paper or scissors: ")
+# p2 = input("Second Player: rock, paper or scissors: ")
+
+# if p1 == p2:
+#     print("It's a tie!")
+# elif p1 == 'rock':
+#     if p2 == 'paper':
+#         print("P2 player wins!")
+#     else:
+#         print("P1 player wins!")
+# elif p1 == 'paper':
+#     if p2 == 'scissors':
+#         print("P2 player wins!")
+#     else:
+#         print("P1 player wins!")
+# elif p1 == "scissors":
+#     if p2 == 'rock':
+#         print("P2 player wins!")
+#     else:
+#         print("P1 player wins!")
+# else:
+#     print("Invalid input!")
+
+# 11.3 Create a Cows and Bulls game.
+
+# import random
+# secret_number = str(random.randint(10, 99))
+# print("Guess the number. It contains 2 digits.")
+# bull = 0
+# cows = 0
+# ramining_try = 7
+# while ramining_try > 0:
+#     player_input = input("Enter ur no. : ")
+#     if player_input == secret_number:
+#         print("Yooo , You have fucked it")
+#         break
+#     else:
+#         if player_input[0] == secret_number[0]:
+#             bull +=1
+#         if player_input [1] == secret_number[1]:
+#             bull +=1
+#         if player_input[0] == secret_number[1]:
+#             cows +=1
+#         if player_input[1] == secret_number[0]:
+#             cows +=1  
+#         print("Bull : " , bull)
+#         print("Cows : " , cows)
+
+#         ramining_try -= 1
+#         if ramining_try < 1:
+#             print("Fuck off")
+#             break
+
+# print(" final Bull : " , bull)
+# print(" final Cows : " , cows)
+
+# 11.4 Create a bulls and cows game for guessing a randomly generated 4 digits number.
+
+import random
+secret_number = str(random.randint(1000,9999))
+print(secret_number)
+print("Guess the number. It contains 4 digits.")
+ramining_try = 7
+while ramining_try > 0:
+    player_input = input("Enter ur no. : ")
+    if player_input == secret_number:
+        print("Yooo , You have fucked it")
+        break
+    else:
+        bulls_cows = [0,0]
+        for i in range(len(secret_number)):
+            if player_input[i] == secret_number[i]:
+                bulls_cows[0] += 1
+            if player_input[i] in secret_number:
+                bulls_cows[1] += 1
+
+            print("Bulls: ",bulls_cows[0])
+            print("Cows: ",bulls_cows[1])
+        ramining_try -= 1
+        if ramining_try < 1:
+            print("Fuck off")
+            break
+
