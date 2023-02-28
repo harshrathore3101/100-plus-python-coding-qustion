@@ -103,7 +103,7 @@
 # print(sum)
 
 # 3.4 For a list, find the second largest number in the list.
-# Nos = [7,2,43,24,5,6,4,22,1,55,52,54,42,2,4,8]
+# Nos = [7,2,43,24,5,6,4,22,1,55,52,54,42,2,77,4,8]
 # length = len(Nos)
 # high_1 = Nos[0]
 # high_2 = Nos[0]
@@ -113,7 +113,8 @@
 #          high_1 = Nos[no]
 #     elif Nos[no] > high_2:
 #          high_2 = Nos[no]
-# print[high_2] ///////////////////////////////////////////////////////////////////////////////////
+# print(high_2)
+# ///////////////////////////////////////////////////////////////////////////////////
 
 # or
 
@@ -130,13 +131,19 @@
 # def remove(str):
 #     res = ""
 #     for i in str:
-#         if i not in str:
+#         if i not in res:
 #             res += i
 #     return res
-
 # str_user = input("Enter a string : ")
 # ans=remove(str_user)
-# print(ans) ////////////////////////////////////////////////////////////////////////////////////
+# print(ans) 
+
+# str_user = input("Enter a string : ")
+# res = ''
+# for i in str_user:
+#     if i not in res:
+#         res+= i
+# print(res)
 
 # 4.1 Convert miles to kilometers.
 # miles = float(input("Enter distance in miles : "))
@@ -414,28 +421,121 @@
 
 # 11.4 Create a bulls and cows game for guessing a randomly generated 4 digits number.
 
-import random
-secret_number = str(random.randint(1000,9999))
-print(secret_number)
-print("Guess the number. It contains 4 digits.")
-ramining_try = 7
-while ramining_try > 0:
-    player_input = input("Enter ur no. : ")
-    if player_input == secret_number:
-        print("Yooo , You have fucked it")
-        break
-    else:
-        bulls_cows = [0,0]
-        for i in range(len(secret_number)):
-            if player_input[i] == secret_number[i]:
-                bulls_cows[0] += 1
-            if player_input[i] in secret_number:
-                bulls_cows[1] += 1
+# import random
+# secret_number = str(random.randint(1000,9999))
+# print(secret_number)
+# print("Guess the number. It contains 4 digits.")
+# ramining_try = 7
+# while ramining_try > 0:
+#     player_input = input("Enter ur no. : ")
+#     if player_input == secret_number:
+#         print("Yooo , You have fucked it")
+#         break
+#     else:
+#         bulls_cows = [0,0]
+#         for i in range(len(secret_number)):
+#             if player_input[i] == secret_number[i]:
+#                 bulls_cows[0] += 1
+#             if player_input[i] in secret_number:
+#                 bulls_cows[1] += 1
 
-            print("Bulls: ",bulls_cows[0])
-            print("Cows: ",bulls_cows[1])
-        ramining_try -= 1
-        if ramining_try < 1:
-            print("Fuck off")
-            break
+#             print("Bulls: ",bulls_cows[0])
+#             print("Cows: ",bulls_cows[1])
+#         ramining_try -= 1
+#         if ramining_try < 1:
+#             print("Fuck off")
+#             break
 
+# 12.1 Create a simple calculator. That will be able to take user input of two numbers and the operation the user wants to perform.
+# def add(n1,n2):
+#     return n1 + n2
+
+# def sub(n1,n2):
+#     return n1 - n2
+
+# def mult(n1,n2):
+#     return n1 * n2
+
+# def div(n1,n2):
+#     return n1 / n2
+
+# def modulo(n1,n2):
+#     return n1 % n2
+
+# num1 = int(input("Enter first number: "))
+# operation = input("What you want to do(+, -, *, /, %):")
+# num2 = int(input("Enter second number: "))
+
+# result = 0
+
+# if operation == '+':
+#     result = add(num1,num2)
+# elif operation == '-':
+#     result = sub(num1,num2)
+# elif operation == '*':
+#     result = mult(num1,num2)
+# elif operation == '/':
+#     result = div(num1,num2)
+# elif operation == '%':
+#     result = modulo(num1,num2)
+
+# print(result)
+
+# 12.2 Generate a password. Your password may contain letters in uppercase or lowercase. It also may contain digits or special characters.
+# import string
+# import random
+
+# pass_len = int(input('How many characters in your password?'))
+# all_chr = string.ascii_letters + string.digits + string.printable
+# password = ''
+# for i in range(pass_len):
+#     rand_char = random.choice(all_chr)
+#     password += rand_char
+# print(password)
+
+# 12.3 Generate a password that has a minimum of one uppercase, one lowercase, one digit, and one special character
+# import string
+# import random
+
+# pass_len = int(input('How many characters in your password?'))
+# all_chr = string.ascii_letters + string.digits + string.printable
+# password = ''
+# password += random.choice(string.ascii_lowercase)
+# password += random.choice(string.ascii_uppercase)
+# password += random.choice(string.digits)
+# password += random.choice(string.punctuation)
+# for i in range(pass_len-4):
+#     rand_char = random.choice(all_chr)
+#     password += rand_char
+# print(password)
+
+# 13.1 Create a simple clock.
+# import time
+
+# hours = int(input('Type in the current hour:'))
+# minute = int(input('Type in the current minute:'))
+# second = int(input('Type in the current second:'))
+
+# def display():
+#     print(hours,':',minute,":",second)
+
+# def add():
+#     global hours
+#     global minute
+#     global second
+
+#     second = second+1
+#     if second == 60:
+#         minute +=1
+#         second = 0
+#     if minute == 60:
+#         hours +=1
+#         minute = 0
+#     if hours == 24:
+#         hours = 0
+# print('\n')
+
+# while True:
+#     time.sleep(1)
+#     add()
+#     display()
