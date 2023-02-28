@@ -3,7 +3,7 @@
 # print(val[1])
 # print(val[0:3])
 # print(val[:])
-
+# print(val[::-1])
 
 #string methods
 # val = "    Harsh rathore  "

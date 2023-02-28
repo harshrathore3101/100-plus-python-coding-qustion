@@ -159,6 +159,23 @@
 # /////////////////////////////////////
 
 # 4.4 ////////////////////////////////
+# def dec_to_binary(n):
+# 	bits = []
+	
+# 	while n > 0:
+# 		bits.append(n%2)
+# 		n = n // 2
+# 	bits.reverse()
+	
+# 	binary = ''
+# 	for bit in bits:
+# 		binary += str(bit)
+# 	return binary
+
+
+# num = int(input("Your decimal number: "))
+# binary = dec_to_binary(num)
+# print("Your binary is:", binary)
 
 # 4.5 ////////////////////////////////
 
@@ -446,6 +463,26 @@
 #             print("Fuck off")
 #             break
 
+# 12.5 Build a simple word completion game.
+import random
+clues = ['-a-e', 'y-ll-w', 's-mm-r', 'wi-t-r','s-n-y', 'l-v-','-i-e']
+postion = random.randint(0,len(clues)-1)
+clue = clues[postion]
+
+print(clue)
+
+ans = input('Enter your answer:')
+
+if len(clue) != len(ans):
+    print("Fuck off")
+
+for i in range(len(clue)):
+    if clue[i] != ans[i]:
+        print("Fuck off")
+    else:
+        print('you fucked it')i
+
+
 # 12.1 Create a simple calculator. That will be able to take user input of two numbers and the operation the user wants to perform.
 # def add(n1,n2):
 #     return n1 + n2
@@ -539,3 +576,31 @@
 #     time.sleep(1)
 #     add()
 #     display()
+# ///////////////////////////////////////////////////////////////////////////
+# import random
+ 
+# def get_a_clue():
+#    clues = ['-a-e', 'y-ll-w', 's-mm-r', 'wi-t-r','s-n-y', 'l-v-','-i-e']
+#    position = random.randint(0, len(clues)-1)
+#    clue = clues[position]
+#    return clue
+ 
+# def check_word_match(clue, guess):
+#    if len(clue) != len(guess):
+#             return False
+#    for i in range (len(clue)):
+#        if clue[i] != '-' and clue[i]!= guess[i]:
+#            return False
+#    return True
+ 
+# # start the game
+# word_clue = get_a_clue()
+# print('Your word clue:', word_clue)
+# answer = input('What would be the word: ')
+ 
+# is_matched = check_word_match(word_clue, answer)
+
+# if is_matched is True:
+#     print('WOW!!! You win')
+# else:
+#     print('Opps! you missed it.')
